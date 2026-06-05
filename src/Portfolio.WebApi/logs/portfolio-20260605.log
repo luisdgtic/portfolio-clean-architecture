@@ -1,0 +1,104 @@
+2026-06-05 10:27:46.839 -06:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2026-06-05 10:27:46.893 -06:00 [WRN] The property 'BlogPost.Tags' is a collection or enumeration type with a value converter but with no value comparer. Set a value comparer to ensure the collection/enumeration elements are compared correctly.
+2026-06-05 10:27:46.899 -06:00 [WRN] The property 'Experience.Technologies' is a collection or enumeration type with a value converter but with no value comparer. Set a value comparer to ensure the collection/enumeration elements are compared correctly.
+2026-06-05 10:27:46.900 -06:00 [WRN] The property 'Project.TechStack' is a collection or enumeration type with a value converter but with no value comparer. Set a value comparer to ensure the collection/enumeration elements are compared correctly.
+2026-06-05 10:27:47.224 -06:00 [INF] Seeding database...
+2026-06-05 10:27:47.457 -06:00 [INF] Database seeded successfully with 1 profile, 3 projects, 12 skills, 2 experiences, 1 education, 2 certifications, 2 blog posts.
+2026-06-05 10:27:47.459 -06:00 [INF] Portfolio API starting...
+2026-06-05 10:27:47.503 -06:00 [INF] Now listening on: http://localhost:5177
+2026-06-05 10:27:47.504 -06:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-06-05 10:27:47.504 -06:00 [INF] Hosting environment: Development
+2026-06-05 10:27:47.504 -06:00 [INF] Content root path: /mnt/c/Users/Luis Antonio/source/repos/Portfolio/src/Portfolio.WebApi
+2026-06-05 10:28:44.638 -06:00 [INF] Application is shutting down...
+2026-06-05 10:29:09.736 -06:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2026-06-05 10:29:09.777 -06:00 [WRN] The property 'BlogPost.Tags' is a collection or enumeration type with a value converter but with no value comparer. Set a value comparer to ensure the collection/enumeration elements are compared correctly.
+2026-06-05 10:29:09.783 -06:00 [WRN] The property 'Experience.Technologies' is a collection or enumeration type with a value converter but with no value comparer. Set a value comparer to ensure the collection/enumeration elements are compared correctly.
+2026-06-05 10:29:09.783 -06:00 [WRN] The property 'Project.TechStack' is a collection or enumeration type with a value converter but with no value comparer. Set a value comparer to ensure the collection/enumeration elements are compared correctly.
+2026-06-05 10:29:10.085 -06:00 [INF] Seeding database...
+2026-06-05 10:29:10.305 -06:00 [INF] Database seeded successfully with 1 profile, 3 projects, 12 skills, 2 experiences, 1 education, 2 certifications, 2 blog posts.
+2026-06-05 10:29:10.307 -06:00 [INF] Portfolio API starting...
+2026-06-05 10:29:10.345 -06:00 [INF] Now listening on: http://localhost:5000
+2026-06-05 10:29:10.346 -06:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-06-05 10:29:10.346 -06:00 [INF] Hosting environment: Development
+2026-06-05 10:29:10.346 -06:00 [INF] Content root path: /mnt/c/Users/Luis Antonio/source/repos/Portfolio/src/Portfolio.WebApi
+2026-06-05 10:29:18.161 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/health - null null
+2026-06-05 10:29:18.176 -06:00 [INF] Executing endpoint 'HTTP: GET /api/health'
+2026-06-05 10:29:18.227 -06:00 [INF] Setting HTTP status code 200.
+2026-06-05 10:29:18.228 -06:00 [INF] Write content with HTTP Response ContentType of application/json
+2026-06-05 10:29:18.231 -06:00 [INF] Executed endpoint 'HTTP: GET /api/health'
+2026-06-05 10:29:18.236 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/health - 200 233 application/json 75.2777ms
+2026-06-05 10:29:18.242 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/profile - null null
+2026-06-05 10:29:18.244 -06:00 [INF] Executing endpoint 'Portfolio.WebApi.Controllers.ProfileController.Get (Portfolio.WebApi)'
+2026-06-05 10:29:18.252 -06:00 [INF] Route matched with {action = "Get", controller = "Profile"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Portfolio.Application.Features.Profiles.ProfileDto]] Get() on controller Portfolio.WebApi.Controllers.ProfileController (Portfolio.WebApi).
+2026-06-05 10:29:18.257 -06:00 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-06-05 10:29:18.261 -06:00 [INF] Handling GetProfileQuery
+2026-06-05 10:29:18.322 -06:00 [INF] Handled GetProfileQuery
+2026-06-05 10:29:18.324 -06:00 [INF] Executing OkObjectResult, writing value of type 'Portfolio.Application.Features.Profiles.ProfileDto'.
+2026-06-05 10:29:18.331 -06:00 [INF] Executed action Portfolio.WebApi.Controllers.ProfileController.Get (Portfolio.WebApi) in 75.4711ms
+2026-06-05 10:29:18.332 -06:00 [INF] Executed endpoint 'Portfolio.WebApi.Controllers.ProfileController.Get (Portfolio.WebApi)'
+2026-06-05 10:29:18.333 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/profile - 200 null application/json; charset=utf-8 91.643ms
+2026-06-05 10:29:18.341 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/projects?featured=true - null null
+2026-06-05 10:29:18.342 -06:00 [INF] Executing endpoint 'Portfolio.WebApi.Controllers.ProjectsController.Get (Portfolio.WebApi)'
+2026-06-05 10:29:18.347 -06:00 [INF] Route matched with {action = "Get", controller = "Projects"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IReadOnlyList`1[Portfolio.Application.Features.Projects.ProjectDto]]] Get(System.Nullable`1[System.Boolean]) on controller Portfolio.WebApi.Controllers.ProjectsController (Portfolio.WebApi).
+2026-06-05 10:29:18.355 -06:00 [INF] Handling GetProjectsQuery
+2026-06-05 10:29:18.371 -06:00 [INF] Handled GetProjectsQuery
+2026-06-05 10:29:18.372 -06:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Portfolio.Application.Features.Projects.ProjectDto, Portfolio.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-06-05 10:29:18.378 -06:00 [INF] Executed action Portfolio.WebApi.Controllers.ProjectsController.Get (Portfolio.WebApi) in 30.8728ms
+2026-06-05 10:29:18.380 -06:00 [INF] Executed endpoint 'Portfolio.WebApi.Controllers.ProjectsController.Get (Portfolio.WebApi)'
+2026-06-05 10:29:18.381 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/projects?featured=true - 200 null application/json; charset=utf-8 40.1928ms
+2026-06-05 10:29:18.390 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/skills - null null
+2026-06-05 10:29:18.391 -06:00 [INF] Executing endpoint 'Portfolio.WebApi.Controllers.SkillsController.Get (Portfolio.WebApi)'
+2026-06-05 10:29:18.395 -06:00 [INF] Route matched with {action = "Get", controller = "Skills"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IReadOnlyList`1[Portfolio.Application.Features.Skills.SkillDto]]] Get(System.Nullable`1[Portfolio.Domain.Enums.SkillCategory]) on controller Portfolio.WebApi.Controllers.SkillsController (Portfolio.WebApi).
+2026-06-05 10:29:18.398 -06:00 [INF] Handling GetSkillsQuery
+2026-06-05 10:29:18.409 -06:00 [INF] Handled GetSkillsQuery
+2026-06-05 10:29:18.409 -06:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Portfolio.Application.Features.Skills.SkillDto, Portfolio.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-06-05 10:29:18.414 -06:00 [INF] Executed action Portfolio.WebApi.Controllers.SkillsController.Get (Portfolio.WebApi) in 18.0087ms
+2026-06-05 10:29:18.414 -06:00 [INF] Executed endpoint 'Portfolio.WebApi.Controllers.SkillsController.Get (Portfolio.WebApi)'
+2026-06-05 10:29:18.415 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/skills - 200 null application/json; charset=utf-8 24.3656ms
+2026-06-05 10:29:18.424 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/blog?page=1&pageSize=2 - null null
+2026-06-05 10:29:18.424 -06:00 [INF] Executing endpoint 'Portfolio.WebApi.Controllers.BlogController.Get (Portfolio.WebApi)'
+2026-06-05 10:29:18.427 -06:00 [INF] Route matched with {action = "Get", controller = "Blog"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Portfolio.Application.Features.BlogPosts.BlogPostsResponse]] Get(Int32, Int32) on controller Portfolio.WebApi.Controllers.BlogController (Portfolio.WebApi).
+2026-06-05 10:29:18.429 -06:00 [INF] Handling GetBlogPostsQuery
+2026-06-05 10:29:18.443 -06:00 [INF] Handled GetBlogPostsQuery
+2026-06-05 10:29:18.444 -06:00 [INF] Executing OkObjectResult, writing value of type 'Portfolio.Application.Features.BlogPosts.BlogPostsResponse'.
+2026-06-05 10:29:18.448 -06:00 [INF] Executed action Portfolio.WebApi.Controllers.BlogController.Get (Portfolio.WebApi) in 20.484ms
+2026-06-05 10:29:18.449 -06:00 [INF] Executed endpoint 'Portfolio.WebApi.Controllers.BlogController.Get (Portfolio.WebApi)'
+2026-06-05 10:29:18.449 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/blog?page=1&pageSize=2 - 200 null application/json; charset=utf-8 25.3684ms
+2026-06-05 10:29:18.457 -06:00 [INF] Request starting HTTP/1.1 POST http://localhost:5000/api/contact - application/json 87
+2026-06-05 10:29:18.458 -06:00 [INF] Executing endpoint 'Portfolio.WebApi.Controllers.ContactController.Send (Portfolio.WebApi)'
+2026-06-05 10:29:18.460 -06:00 [INF] Route matched with {action = "Send", controller = "Contact"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Portfolio.Application.Features.ContactMessages.SendContactMessageResponse]] Send(Portfolio.Application.Features.ContactMessages.SendContactMessageCommand) on controller Portfolio.WebApi.Controllers.ContactController (Portfolio.WebApi).
+2026-06-05 10:29:18.486 -06:00 [INF] Handling SendContactMessageCommand
+2026-06-05 10:29:18.515 -06:00 [INF] Handled SendContactMessageCommand
+2026-06-05 10:29:18.516 -06:00 [INF] Executing OkObjectResult, writing value of type 'Portfolio.Application.Features.ContactMessages.SendContactMessageResponse'.
+2026-06-05 10:29:18.516 -06:00 [INF] [EMAIL NO-OP] To: test@example.com, Subject: Thank you for your message: Hello, Body: Hi Test User,
+
+Thank you for reaching out. I'll get back to you soon.
+
+Best regards
+2026-06-05 10:29:18.517 -06:00 [INF] Executed action Portfolio.WebApi.Controllers.ContactController.Send (Portfolio.WebApi) in 57.0604ms
+2026-06-05 10:29:18.518 -06:00 [INF] Executed endpoint 'Portfolio.WebApi.Controllers.ContactController.Send (Portfolio.WebApi)'
+2026-06-05 10:29:18.518 -06:00 [INF] Request finished HTTP/1.1 POST http://localhost:5000/api/contact - 200 null application/json; charset=utf-8 60.631ms
+2026-06-05 10:29:18.526 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/blog/building-scalable-apis-clean-architecture-dotnet - null null
+2026-06-05 10:29:18.526 -06:00 [INF] Executing endpoint 'Portfolio.WebApi.Controllers.BlogController.GetBySlug (Portfolio.WebApi)'
+2026-06-05 10:29:18.529 -06:00 [INF] Route matched with {action = "GetBySlug", controller = "Blog"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Portfolio.Application.Features.BlogPosts.BlogPostDetailDto]] GetBySlug(System.String) on controller Portfolio.WebApi.Controllers.BlogController (Portfolio.WebApi).
+2026-06-05 10:29:18.531 -06:00 [INF] Handling GetBlogPostBySlugQuery
+2026-06-05 10:29:18.545 -06:00 [INF] Handled GetBlogPostBySlugQuery
+2026-06-05 10:29:18.545 -06:00 [INF] Executing OkObjectResult, writing value of type 'Portfolio.Application.Features.BlogPosts.BlogPostDetailDto'.
+2026-06-05 10:29:18.546 -06:00 [INF] Executed action Portfolio.WebApi.Controllers.BlogController.GetBySlug (Portfolio.WebApi) in 17.1208ms
+2026-06-05 10:29:18.547 -06:00 [INF] Executed endpoint 'Portfolio.WebApi.Controllers.BlogController.GetBySlug (Portfolio.WebApi)'
+2026-06-05 10:29:18.547 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/blog/building-scalable-apis-clean-architecture-dotnet - 200 null application/json; charset=utf-8 21.103ms
+2026-06-05 10:31:12.747 -06:00 [INF] Application is shutting down...
+2026-06-05 11:05:29.730 -06:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2026-06-05 11:05:29.771 -06:00 [WRN] The property 'BlogPost.Tags' is a collection or enumeration type with a value converter but with no value comparer. Set a value comparer to ensure the collection/enumeration elements are compared correctly.
+2026-06-05 11:05:29.781 -06:00 [WRN] The property 'Experience.Technologies' is a collection or enumeration type with a value converter but with no value comparer. Set a value comparer to ensure the collection/enumeration elements are compared correctly.
+2026-06-05 11:05:29.784 -06:00 [WRN] The property 'Project.TechStack' is a collection or enumeration type with a value converter but with no value comparer. Set a value comparer to ensure the collection/enumeration elements are compared correctly.
+2026-06-05 11:05:30.115 -06:00 [INF] Seeding database...
+2026-06-05 11:05:30.338 -06:00 [INF] Database seeded successfully with 1 profile, 3 projects, 12 skills, 2 experiences, 1 education, 2 certifications, 2 blog posts.
+2026-06-05 11:05:30.345 -06:00 [INF] Portfolio API starting...
+2026-06-05 11:05:30.514 -06:00 [INF] Now listening on: http://localhost:5000
+2026-06-05 11:05:30.557 -06:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-06-05 11:05:30.559 -06:00 [INF] Hosting environment: Development
+2026-06-05 11:05:30.561 -06:00 [INF] Content root path: C:\Users\Luis Antonio\source\repos\Portfolio\src\Portfolio.WebApi
+2026-06-05 11:05:44.033 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/ - null null
+2026-06-05 11:05:44.245 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/ - 404 null null 222.5944ms
+2026-06-05 11:05:44.260 -06:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5000/, Response status code: 404

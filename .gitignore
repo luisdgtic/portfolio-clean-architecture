@@ -1,0 +1,51 @@
+## .NET
+bin/
+obj/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+*.userprefs
+.vs/
+[Pp]ackages/
+*.nupkg
+**/[Pp]ackages/*
+!**/[Pp]ackages/build/
+*.cache
+*.dtbcache.v2
+TestResults/
+[Bb]uild/
+
+## NuGet
+nuget.exe
+*.nuget.props
+*.nuget.targets
+
+## JetBrains Rider
+.idea/
+*.sln.iml
+
+## VS Code
+.vscode/
+
+## App-specific
+appsettings.*.local.json
+*.db
+*.db-shm
+*.db-wal
+
+## Node
+node_modules/
+dist/
+
+## Docker
+.docker/
+
+## Environment
+.env
+.env.local
+.env.*.local
+
+## OS
+.DS_Store
+Thumbs.db

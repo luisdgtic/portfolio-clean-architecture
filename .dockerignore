@@ -1,0 +1,14 @@
+**/bin
+**/obj
+**/node_modules
+**/.git
+**/.gitignore
+**/.editorconfig
+**/.dockerignore
+**/Dockerfile
+**/.env
+**/.env.*
+**/*.md
+**/TestResults
+**/dist
+**/client/node_modules
