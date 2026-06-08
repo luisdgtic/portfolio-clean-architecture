@@ -10,10 +10,10 @@ interface ProjectCardProps {
 export function ProjectCard({ project }: ProjectCardProps) {
   return (
     <Card className="group flex flex-col overflow-hidden">
-      {project.imageUrl && (
+      {project.imageUrls.length > 0 && (
         <div className="-mx-6 -mt-6 mb-4 aspect-video overflow-hidden bg-slate-100 dark:bg-slate-700">
           <img
-            src={project.imageUrl}
+            src={project.imageUrls[0]}
             alt={project.title}
             className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
             loading="lazy"

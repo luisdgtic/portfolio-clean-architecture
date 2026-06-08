@@ -10,7 +10,7 @@ public sealed record ProjectDetailDto(
     Guid Id,
     string Title,
     string Description,
-    string? ImageUrl,
+    IReadOnlyList<string> ImageUrls,
     string? GitHubUrl,
     string? LiveUrl,
     IReadOnlyList<string> TechStack,
@@ -34,7 +34,7 @@ public sealed class GetProjectByIdHandler : IRequestHandler<GetProjectByIdQuery,
             return Result<ProjectDetailDto>.Failure($"Project with id '{request.Id}' not found.");
 
         var dto = new ProjectDetailDto(
-            project.Id, project.Title, project.Description, project.ImageUrl,
+            project.Id, project.Title, project.Description, project.ImageUrls,
             project.GitHubUrl, project.LiveUrl, project.TechStack,
             project.IsFeatured, project.SortOrder);
 

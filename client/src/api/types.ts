@@ -17,7 +17,7 @@ export interface Project {
   id: string;
   title: string;
   description: string;
-  imageUrl: string | null;
+  imageUrls: string[];
   gitHubUrl: string | null;
   liveUrl: string | null;
   techStack: string[];

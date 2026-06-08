@@ -15,7 +15,11 @@ public sealed class ProjectConfiguration : IEntityTypeConfiguration<Project>
 
         builder.Property(x => x.Title).IsRequired().HasMaxLength(200);
         builder.Property(x => x.Description).IsRequired().HasMaxLength(3000);
-        builder.Property(x => x.ImageUrl).HasMaxLength(500);
+
+        builder.Property(x => x.ImageUrls)
+            .HasConversion<StringListValueConverter>()
+            .HasMaxLength(4000);
+
         builder.Property(x => x.GitHubUrl).HasMaxLength(500);
         builder.Property(x => x.LiveUrl).HasMaxLength(500);
 

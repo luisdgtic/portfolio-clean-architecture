@@ -1,6 +1,7 @@
 import { useParams, Link } from 'react-router-dom';
 import { Button } from '@/components/ui/Button';
 import { Badge } from '@/components/ui/Badge';
+import { ImageCarousel } from '@/components/ImageCarousel';
 import { useProject } from '@/api/hooks';
 
 export default function ProjectDetailPage() {
@@ -24,9 +25,9 @@ export default function ProjectDetailPage() {
     <div className="mx-auto max-w-4xl px-4 py-12">
       <Link to="/projects" className="mb-6 inline-block text-sm text-sky-500 hover:text-sky-600">&larr; Back to Projects</Link>
 
-      {project.imageUrl && (
-        <div className="mb-8 overflow-hidden rounded-xl bg-slate-100 dark:bg-slate-800">
-          <img src={project.imageUrl} alt={project.title} className="w-full object-cover" loading="lazy" />
+      {project.imageUrls.length > 0 && (
+        <div className="mb-8">
+          <ImageCarousel images={project.imageUrls} alt={project.title} />
         </div>
       )}
 

@@ -10,7 +10,7 @@ public sealed record ProjectDto(
     Guid Id,
     string Title,
     string Description,
-    string? ImageUrl,
+    IReadOnlyList<string> ImageUrls,
     string? GitHubUrl,
     string? LiveUrl,
     IReadOnlyList<string> TechStack,
@@ -37,6 +37,6 @@ public sealed class GetProjectsHandler : IRequestHandler<GetProjectsQuery, Resul
     }
 
     private static ProjectDto Map(Domain.Entities.Project p) =>
-        new(p.Id, p.Title, p.Description, p.ImageUrl, p.GitHubUrl, p.LiveUrl,
+        new(p.Id, p.Title, p.Description, p.ImageUrls, p.GitHubUrl, p.LiveUrl,
             p.TechStack, p.IsFeatured, p.SortOrder);
 }
