@@ -11,14 +11,5 @@ services:
         value: false
       - key: ConnectionStrings__Postgres
         value: SET_IN_RENDER_DASHBOARD
-      - key: CorsOrigins__0
-        value: https://portfolio-client.onrender.com
     healthCheckPath: /api/health
-    autoDeploy: true
-
-  - type: web
-    name: portfolio-client
-    runtime: docker
-    plan: free
-    dockerfilePath: ./Dockerfile.client
     autoDeploy: true

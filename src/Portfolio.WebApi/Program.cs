@@ -40,6 +40,8 @@ var app = builder.Build();
 
 app.UseMiddleware<ExceptionHandlingMiddleware>();
 
+app.UseStaticFiles();
+
 if (app.Environment.IsDevelopment())
 {
     app.MapOpenApi();
@@ -47,6 +49,7 @@ if (app.Environment.IsDevelopment())
 
 app.UseCors();
 app.MapControllers();
+app.MapFallbackToFile("index.html");
 
 app.MapHealthCheckEndpoint();
 

@@ -117,8 +117,7 @@ dotnet test
 ### Docker (Full Stack)
 ```bash
 docker compose up -d
-# API:     http://localhost:5000
-# Client:  http://localhost:3000
+# Everything at: http://localhost:5000
 ```
 ```bash
 # Rebuild from scratch (clears DB volume):
@@ -159,27 +158,26 @@ docker compose down -v && docker compose up --build -d
 
 ## Deployment
 
-This project is configured with a **Render Blueprint** (`render.yaml`) using Supabase for the free, permanent PostgreSQL database:
+Deployed as a **single unified service** on Render with Supabase for PostgreSQL:
 
-| Service | Platform | Plan |
-|---------|----------|------|
-| .NET API | Render Web Service | Free |
-| React SPA | Render Web Service (Docker + Nginx) | Free |
+| Component | Platform | Plan |
+|-----------|----------|------|
+| App (API + React SPA) | Render Web Service | Free |
 | PostgreSQL | [Supabase] | Free (permanent, 500 MB) |
+
+The .NET API serves the React SPA as static files from `wwwroot/`. No separate frontend service, no nginx proxy — everything on one URL.
 
 CI/CD is handled by **GitHub Actions** on every push to `main`.
 
 ### Deploy Steps
 
-1. **Supabase:** Create a free project at [supabase.com](https://supabase.com), copy the `Project URL` + `Password` connection string
-2. **Render:** Go to Dashboard → Blueprints → New → Connect your GitHub repo. Render reads `render.yaml` automatically
-3. **Render → `portfolio-api` → Environment →** paste your Supabase connection string into `ConnectionStrings__Postgres`
-4. **Render → `portfolio-api` →** set `CorsOrigins__0` to `https://portfolio-client.onrender.com`
-
+1. **Supabase:** Create a free project at [supabase.com](https://supabase.com), copy your connection string
+2. **Render:** Dashboard → Blueprints → New → Connect your GitHub repo. Render reads `render.yaml` automatically
+3. **Render → `portfolio-api` → Environment →** paste your Supabase connection string into `ConnectionStrings__Postgres` using the ADO.NET format:
 ```
-# Supabase connection string format (replace PASSWORD and HOST):
-Host=aws-0-us-east-1.pooler.supabase.com;Port=5432;Database=postgres;Username=postgres.YOUR_PROJECT_REF;Password=YOUR_DB_PASSWORD
+Host=aws-0-us-east-1.pooler.supabase.com;Port=5432;Database=postgres;Username=postgres.YOUR_REF;Password=YOUR_PASSWORD
 ```
+4. Deploy — the API creates tables and seeds data automatically on first run
 
 [Supabase]: https://supabase.com
 
