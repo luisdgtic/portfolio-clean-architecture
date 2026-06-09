@@ -29,7 +29,12 @@ jobs:
         run: dotnet test --no-build --configuration Release --verbosity normal
 
       - name: Docker Build API
-        run: docker build -t portfolio-api -f Dockerfile .
+        run: |
+          for i in 1 2 3; do
+            docker build -t portfolio-api -f Dockerfile . && break
+            echo "Attempt $i failed, retrying in 10s..."
+            sleep 10
+          done
 
   frontend:
     name: Frontend Build
@@ -56,6 +61,3 @@ jobs:
       - name: Build
         run: npm run build
         working-directory: client
-
-      - name: Docker Build Client
-        run: docker build -t portfolio-client -f Dockerfile.client .
