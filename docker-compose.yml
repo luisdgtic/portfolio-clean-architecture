@@ -1,5 +1,5 @@
 services:
-  api:
+  portfolio-api:
     build:
       context: .
       dockerfile: Dockerfile
@@ -14,14 +14,14 @@ services:
         condition: service_healthy
     restart: unless-stopped
 
-  client:
+  portfolio-client:
     build:
       context: .
       dockerfile: Dockerfile.client
     ports:
       - '3000:80'
     depends_on:
-      - api
+      - portfolio-api
     restart: unless-stopped
 
   db:

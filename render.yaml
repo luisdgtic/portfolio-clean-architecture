@@ -10,9 +10,7 @@ services:
       - key: UseSqlite
         value: false
       - key: ConnectionStrings__Postgres
-        fromDatabase:
-          name: portfolio-db
-          property: connectionString
+        value: SET_IN_RENDER_DASHBOARD
       - key: CorsOrigins__0
         value: https://portfolio-client.onrender.com
     healthCheckPath: /api/health
@@ -23,14 +21,4 @@ services:
     runtime: docker
     plan: free
     dockerfilePath: ./Dockerfile.client
-    envVars:
-      - key: VITE_API_URL
-        value: https://portfolio-api.onrender.com
     autoDeploy: true
-
-  - type: pserv
-    name: portfolio-db
-    plan: free
-    databaseName: portfolio
-    ipAllowList: []
-    postgresMajorVersion: 16
