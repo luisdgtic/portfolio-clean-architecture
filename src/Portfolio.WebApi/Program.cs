@@ -1,4 +1,6 @@
 using System.Text.Json.Serialization;
+using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Storage;
 using Portfolio.Application;
 using Portfolio.Infrastructure;
 using Portfolio.Infrastructure.Data;
@@ -60,7 +62,8 @@ using (var scope = app.Services.CreateScope())
 
     try
     {
-        await context.Database.EnsureCreatedAsync();
+        var creator = context.GetService<IRelationalDatabaseCreator>();
+        creator.CreateTables();
         await DatabaseSeeder.SeedAsync(context, logger);
     }
     catch (Exception ex)
